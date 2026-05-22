@@ -126,11 +126,11 @@
 
       .nav a {
         color: var(--muted);
-        font-size: 0.95rem;
+        font-size: 0.83rem;
       }
 
       .nav a:not(.nav-cta) {
-        font-size: 1.08rem;
+        font-size: 1.1rem;
         font-weight: 700;
       }
 
@@ -424,6 +424,7 @@
       .about-photo {
         position: relative;
         overflow: hidden;
+        margin: 0;
         min-height: 280px;
         border-radius: 26px;
         background: rgba(255, 255, 255, 0.6);
@@ -554,6 +555,29 @@
         flex-shrink: 0;
       }
 
+      .contact-item.contact-map {
+        display: block;
+      }
+
+      .map-frame {
+        margin-top: 14px;
+        overflow: hidden;
+        border-radius: 18px;
+        border: 1px solid rgba(79, 31, 53, 0.08);
+        box-shadow: var(--shadow);
+      }
+
+      .map-frame iframe {
+        display: block;
+        width: 100%;
+        height: 280px;
+        border: 0;
+      }
+
+      .contact-map .hero-actions {
+        margin-top: 14px;
+      }
+
       .faq-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -626,7 +650,7 @@
 
       @media (max-width: 900px) {
         .container {
-          width: min(var(--max), calc(100% - 20px));
+          width: min(var(--max), calc(100% - 16px));
         }
 
         .topbar {
@@ -635,45 +659,55 @@
 
         .topbar-inner {
           min-height: auto;
-          padding: 14px 0;
+          padding: 10px 0;
           align-items: center;
           flex-direction: row;
-          gap: 12px;
+          gap: 8px;
+        }
+
+        .brand {
+          flex: 0 1 34%;
+          min-width: 0;
         }
 
         .brand-copy strong {
-          font-size: 0.84rem;
+          font-size: 0.76rem;
+          line-height: 1.05;
         }
 
         .brand-copy span {
-          font-size: 0.72rem;
+          font-size: 0.6rem;
+          line-height: 1.05;
         }
 
         .nav {
-          flex: 1;
+          flex: 1 1 auto;
           min-width: 0;
+          display: flex;
+          align-items: center;
           justify-content: flex-end;
-          gap: 4px;
+          gap: 6px;
           flex-wrap: nowrap;
         }
 
         .nav a:not(.nav-cta) {
           display: inline-flex;
           align-items: center;
-          min-height: 34px;
-          font-size: 0.86rem;
+          min-height: 24px;
+          font-size: 0.76rem;
+          letter-spacing: -0.01em;
           white-space: nowrap;
         }
 
         .nav-cta {
-          min-height: 28px;
-          padding: 0 7px;
-          font-size: 0.54rem;
+          min-height: 26px;
+          padding: 0 6px;
+          font-size: 0.52rem;
           font-weight: 700;
-          letter-spacing: 0.01em;
+          letter-spacing: -0.02em;
           white-space: nowrap;
+          box-shadow: 0 8px 14px rgba(255, 107, 44, 0.14);
           flex-shrink: 0;
-          box-shadow: 0 10px 18px rgba(255, 107, 44, 0.16);
         }
 
         .hero {
@@ -757,13 +791,14 @@
 
         .about-gallery {
           grid-template-columns: repeat(3, minmax(0, 1fr));
-          gap: 14px;
+          gap: 4px;
         }
 
         .about-photo,
         .about-photo.tall {
-          min-height: 230px;
+          min-height: 260px;
           grid-row: auto;
+          border-radius: 22px;
         }
 
         .about-photo img {
@@ -771,10 +806,10 @@
         }
 
         .about-photo-label {
-          left: 8px;
-          right: 8px;
-          bottom: 8px;
-          padding: 6px 8px;
+          left: 6px;
+          right: 6px;
+          bottom: 6px;
+          padding: 5px 6px;
           font-size: 0.68rem;
           text-align: center;
         }
@@ -811,31 +846,41 @@
 
       @media (max-width: 560px) {
         .container {
-          width: min(var(--max), calc(100% - 16px));
+          width: min(var(--max), calc(100% - 12px));
+        }
+
+        .topbar-inner {
+          gap: 6px;
+        }
+
+        .brand {
+          flex-basis: 33%;
         }
 
         .nav a:not(.nav-cta) {
-          font-size: 0.8rem;
+          min-height: 22px;
+          font-size: 0.68rem;
         }
 
         .nav-cta {
-          min-height: 26px;
-          padding: 0 6px;
-          font-size: 0.48rem;
+          min-height: 24px;
+          padding: 0 4px;
+          font-size: 0.44rem;
+          letter-spacing: -0.02em;
         }
 
         .brand-copy strong {
-          font-size: 0.78rem;
+          font-size: 0.64rem;
         }
 
         .brand-copy span {
-          font-size: 0.66rem;
+          font-size: 0.52rem;
         }
 
         .hero-copy,
         .section-card,
         .contact-card {
-          padding: 18px;
+          padding: 16px;
         }
 
         .hero-copy::before {
@@ -852,11 +897,11 @@
 
         .about-photo,
         .about-photo.tall {
-          min-height: 200px;
+          min-height: 240px;
         }
 
         .about-gallery {
-          gap: 10px;
+          gap: 3px;
         }
 
         .about-photo-label {
@@ -1010,22 +1055,22 @@
                 <span class="service-index">02</span>
                 <h3>Entrenamiento presencial</h3>
                 <p>
-                  Sesiones enfocadas en tecnica, postura, fuerza y progresion, con acompañamiento cercano
+                  Sesiones enfocadas en técnica, postura, fuerza y progresion, con acompañamiento cercano
                   para que entrenes con seguridad y confianza.
                 </p>
                 <div class="tag-list">
                   <span class="tag">Correccion en vivo</span>
                   <span class="tag">Trabajo tecnico</span>
-                  <span class="tag">Progresion guiada</span>
+                  <span class="tag">Progresión guiada</span>
                 </div>
               </article>
 
               <article class="section-card reveal">
                 <span class="service-index">03</span>
-                <h3>Planes para habitos y bienestar</h3>
+                <h3>Planes para hábitos y bienestar</h3>
                 <p>
                   Un formato pensado para sumar movimiento, orden y constancia a tu semana, sin perder de
-                  vista el descanso, la motivacion y el bienestar general.
+                  vista el descanso y el bienestar general.
                 </p>
                 <div class="tag-list">
                   <span class="tag">Hábitos</span>
@@ -1044,7 +1089,7 @@
                 <h2>Contacto</h2>
                 <p>
                   Elegí el canal que te resulte más cómodo. La idea es que sea fácil consultar, coordinar y
-                  sostener el proceso sin vueltas.
+                  sostener el proceso.
                 </p>
               </div>
 
@@ -1052,7 +1097,7 @@
                 <div class="contact-item">
                   <div>
                     <strong>WhatsApp</strong>
-                    <span>Seguimiento semanal, dudas rapidas y coordinacion de sesiones.</span>
+                    <span>Seguimiento semanal, dudas rapidas y coordinación de sesiones.</span>
                   </div>
                   <a class="btn btn-primary" href="https://wa.me/5491157723574" target="_blank" rel="noreferrer">Escribir</a>
                 </div>
@@ -1063,6 +1108,28 @@
                     <span>Ideal para consultas más detalladas o propuestas de trabajo.</span>
                   </div>
                   <a class="btn btn-primary" href="mailto:Delizondo@live.com.ar">Escribir</a>
+                </div>
+
+                <div class="contact-item contact-map">
+                  <div>
+                    <strong>Ubicación</strong>
+                    <span>
+                      Trabajo por la zona de Puerto Madero y también puedo coordinar sesiones
+                      a domicilio según disponibilidad.
+                    </span>
+                  </div>
+                  <div class="map-frame">
+                    <iframe
+                      title="Ubicación en Puerto Madero"
+                      src="https://www.google.com/maps?q=Puerto%20Madero%2C%20Buenos%20Aires&z=14&output=embed"
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="hero-actions">
+                    <a class="btn btn-primary" href="https://maps.app.goo.gl/7RV8UAgVDvRZefBY9" target="_blank" rel="noreferrer">Abrir en Google Maps</a>
+                  </div>
                 </div>
               </div>
             </div>
