@@ -37,7 +37,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@500;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -70,7 +70,7 @@
 
       body {
         margin: 0;
-        font-family: "Space Grotesk", sans-serif;
+        font-family: "DM Sans", sans-serif;
         color: var(--text);
         background:
           radial-gradient(circle at top left, rgba(240, 93, 147, 0.2), transparent 28%),
@@ -93,7 +93,7 @@
       }
 
       .shell {
-        overflow: hidden;
+        overflow: visible;
       }
 
       .container {
@@ -103,25 +103,40 @@
 
       .topbar {
         position: sticky;
-        top: 0;
+        top: 16px;
         z-index: 20;
-        backdrop-filter: blur(18px);
-        background: rgba(255, 244, 247, 0.82);
-        border-bottom: 1px solid rgba(79, 31, 53, 0.08);
+        background: transparent;
+        border: 0;
+        backdrop-filter: none;
       }
 
       .topbar-inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 16px;
-        min-height: 84px;
+        gap: 24px;
+        min-height: 64px;
+        padding: 9px 14px 9px 12px;
+        border: 1px solid rgba(79, 31, 53, 0.12);
+        border-radius: 999px;
+        background: rgba(255, 250, 252, 0.94);
+        box-shadow: 0 14px 34px rgba(79, 31, 53, 0.13);
+        backdrop-filter: blur(18px);
       }
 
       .brand {
         display: flex;
         align-items: center;
-        gap: 0;
+        gap: 10px;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+        flex: 0 0 38px;
+        border-radius: 11px;
+        object-fit: cover;
+        background: #f05d93;
       }
 
       .brand-copy strong,
@@ -130,35 +145,42 @@
       h3,
       .stat-number,
       .service-index {
-        font-family: "Syne", sans-serif;
+        font-family: "Outfit", sans-serif;
       }
 
       .brand-copy strong {
         display: block;
-        font-size: 0.95rem;
-        letter-spacing: 0.03em;
-        line-height: 0.96;
+        font-size: 0.9rem;
+        letter-spacing: 0.08em;
+        line-height: 1;
+        text-transform: uppercase;
       }
 
       .brand-copy span {
         color: var(--muted);
-        font-size: 0.82rem;
-        line-height: 0.96;
+        font-size: 0.62rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        line-height: 1;
+        text-transform: uppercase;
       }
 
       .nav {
         display: flex;
         align-items: center;
-        gap: 22px;
+        gap: 24px;
       }
 
       .nav a {
         color: var(--muted);
-        font-size: 0.83rem;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
       }
 
       .nav a:not(.nav-cta) {
-        font-size: 1.1rem;
+        font-size: 0.72rem;
         font-weight: 700;
       }
 
@@ -170,18 +192,18 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        min-height: 54px;
-        padding: 0 22px;
+        min-height: 42px;
+        padding: 0 18px;
         border-radius: 999px;
-        background: linear-gradient(135deg, var(--accent), #ff9154);
-        color: #ffffff;
+        background: var(--panel);
+        color: #fff8fb;
         font-weight: 700;
-        box-shadow: 0 18px 30px rgba(255, 107, 44, 0.28);
+        box-shadow: none;
         transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
       }
 
       .nav a.nav-cta {
-        color: #ffffff;
+        color: #fff8fb;
       }
 
       .nav-cta:hover {
@@ -189,7 +211,7 @@
       }
 
       .nav a.nav-cta:hover {
-        color: #ffffff;
+        color: #fff8fb;
       }
 
       .hero {
@@ -531,6 +553,12 @@
         border-radius: 24px;
       }
 
+      .testimonial-stars {
+        color: var(--accent);
+        font-size: 1.05rem;
+        letter-spacing: 0.08em;
+      }
+
       .quote-card strong {
         display: block;
         margin-top: 20px;
@@ -686,8 +714,8 @@
         }
 
         .topbar-inner {
-          min-height: auto;
-          padding: 10px 0;
+          min-height: 58px;
+          padding: 8px 0;
           align-items: center;
           flex-direction: row;
           gap: 8px;
@@ -696,16 +724,24 @@
         .brand {
           flex: 0 1 34%;
           min-width: 0;
+          gap: 6px;
+        }
+
+        .brand-mark {
+          width: 28px;
+          height: 28px;
+          flex-basis: 28px;
+          border-radius: 8px;
         }
 
         .brand-copy strong {
-          font-size: 0.76rem;
+          font-size: 0.66rem;
           line-height: 1.05;
           margin-bottom: 1px;
         }
 
         .brand-copy span {
-          font-size: 0.6rem;
+          font-size: 0.48rem;
           line-height: 0.95;
         }
 
@@ -715,25 +751,25 @@
           display: flex;
           align-items: center;
           justify-content: flex-end;
-          gap: 6px;
+          gap: 10px;
           flex-wrap: nowrap;
         }
 
         .nav a:not(.nav-cta) {
           display: inline-flex;
           align-items: center;
-          min-height: 24px;
-          font-size: 0.76rem;
-          letter-spacing: -0.01em;
+          min-height: 28px;
+          font-size: 0.57rem;
+          letter-spacing: 0.03em;
           white-space: nowrap;
         }
 
         .nav-cta {
-          min-height: 26px;
-          padding: 0 6px;
-          font-size: 0.52rem;
+          min-height: 30px;
+          padding: 0 9px;
+          font-size: 0.53rem;
           font-weight: 700;
-          letter-spacing: -0.02em;
+          letter-spacing: 0.03em;
           white-space: nowrap;
           box-shadow: 0 8px 14px rgba(255, 107, 44, 0.14);
           flex-shrink: 0;
@@ -887,24 +923,24 @@
         }
 
         .nav a:not(.nav-cta) {
-          min-height: 22px;
-          font-size: 0.68rem;
+          min-height: 28px;
+          font-size: 0.53rem;
         }
 
         .nav-cta {
-          min-height: 24px;
-          padding: 0 4px;
-          font-size: 0.44rem;
-          letter-spacing: -0.02em;
+          min-height: 30px;
+          padding: 0 7px;
+          font-size: 0.48rem;
+          letter-spacing: 0.02em;
         }
 
         .brand-copy strong {
-          font-size: 1rem;
+          font-size: 0.59rem;
           margin-bottom: 1px;
         }
 
         .brand-copy span {
-          font-size: 0.65rem;
+          font-size: 0.43rem;
           line-height: 0.95;
         }
 
@@ -940,6 +976,506 @@
           padding: 5px 6px;
         }
       }
+
+      /* Direction inspired by the reference: bold color fields, crisp hierarchy and calm cards. */
+      body {
+        background: #fbf7f5;
+      }
+
+      .topbar {
+        background: transparent;
+        border-bottom-color: transparent;
+      }
+
+      .hero {
+        padding: 34px 0 86px;
+      }
+
+      .hero-copy {
+        padding: clamp(36px, 6vw, 76px);
+        overflow: hidden;
+        border: 1px solid rgba(79, 31, 53, 0.14);
+        border-radius: 40px;
+        background:
+          radial-gradient(circle at 92% 12%, rgba(255, 255, 255, 0.48), transparent 21%),
+          linear-gradient(135deg, #ffcbdd 0%, #ff9ec0 56%, #ff8a62 145%);
+        box-shadow: none;
+      }
+
+      .hero-copy::before {
+        inset: 14px;
+        border-color: rgba(79, 31, 53, 0.12);
+        border-radius: 30px;
+      }
+
+      .intro-line,
+      .section-kicker {
+        color: var(--panel);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+
+      .intro-line {
+        margin-bottom: 28px;
+      }
+
+      .intro-line::before {
+        width: 30px;
+        background: var(--panel);
+      }
+
+      h1 {
+        max-width: 13ch;
+        font-size: clamp(3.2rem, 7.2vw, 6.6rem);
+        line-height: 0.91;
+      }
+
+      .hero-copy p {
+        max-width: 54ch;
+        color: rgba(47, 23, 36, 0.82);
+        font-size: 1.12rem;
+      }
+
+      .btn-primary {
+        background: var(--panel);
+        color: #fff8fb;
+        box-shadow: 0 14px 22px rgba(79, 31, 53, 0.2);
+      }
+
+      .btn-secondary {
+        background: rgba(255, 255, 255, 0.62);
+        border-color: rgba(79, 31, 53, 0.2);
+      }
+
+      .hero-metrics {
+        gap: 10px;
+        margin-top: 46px;
+      }
+
+      .metric-card {
+        padding: 20px;
+        border: 0;
+        border-radius: 18px;
+        background: var(--panel);
+      }
+
+      .metric-card .stat-number,
+      .metric-card span:last-child {
+        color: #fff8fb;
+      }
+
+      .metric-card span:last-child {
+        opacity: 0.78;
+      }
+
+      .section {
+        padding: 98px 0;
+      }
+
+      .section-header {
+        display: grid;
+        grid-template-columns: minmax(0, 1.08fr) minmax(250px, 0.72fr);
+        align-items: end;
+        column-gap: 52px;
+        row-gap: 14px;
+        margin-bottom: 38px;
+      }
+
+      .section-header .section-kicker {
+        grid-column: 1 / -1;
+      }
+
+      .section-header h2 {
+        max-width: 14ch;
+        font-size: clamp(2.6rem, 5.3vw, 4.5rem);
+        line-height: 0.94;
+      }
+
+      .section-header p {
+        padding-bottom: 4px;
+        font-size: 1.04rem;
+      }
+
+      .section-about {
+        background: #fff;
+      }
+
+      .section-about .section-card {
+        border: 1px solid rgba(79, 31, 53, 0.1);
+        border-radius: 30px;
+        background: #fffafc;
+        box-shadow: none;
+      }
+
+      .section-about .section-header {
+        display: block;
+        margin-bottom: 26px;
+      }
+
+      .section-about .section-kicker {
+        display: block;
+        margin-bottom: 13px;
+      }
+
+      .section-about .section-header h2 {
+        max-width: none;
+      }
+
+      .credential-item {
+        padding: 20px;
+        border-radius: 16px;
+        background: #fff;
+      }
+
+      .about-photo,
+      .about-photo.tall {
+        border: 0;
+        border-radius: 22px;
+        box-shadow: none;
+      }
+
+      .about-gallery {
+        gap: 10px;
+      }
+
+      .section-services {
+        background: #fff;
+        color: var(--text);
+      }
+
+      .section-services .section-kicker,
+      .section-services .section-header p {
+        color: var(--muted);
+      }
+
+      .section-services .section-card {
+        min-height: 100%;
+        padding: 30px;
+        border: 0;
+        border-radius: 24px;
+        background: #fffafc;
+        box-shadow: none;
+      }
+
+      .section-services .section-card h3 {
+        color: var(--text);
+      }
+
+      .section-services .section-card:nth-child(2) {
+        background: #ffd7e5;
+      }
+
+      .section-services .section-card:nth-child(3) {
+        background: #ffe8d8;
+      }
+
+      .section-services .service-index {
+        width: auto;
+        height: auto;
+        padding: 7px 10px;
+        border-radius: 999px;
+        background: var(--panel);
+        color: #fff8fb;
+        font-size: 0.74rem;
+      }
+
+      .section-services .tag {
+        background: rgba(79, 31, 53, 0.06);
+      }
+
+      .section-contact {
+        background:
+          radial-gradient(circle at 88% 25%, rgba(255, 255, 255, 0.5), transparent 25%),
+          #ffb5cf;
+      }
+
+      .section-contact .contact-card {
+        border: 1px solid rgba(79, 31, 53, 0.14);
+        border-radius: 32px;
+        background: #fffafc;
+        box-shadow: none;
+      }
+
+      .contact-item {
+        padding: 22px;
+        border-radius: 16px;
+        background: #fff;
+      }
+
+      .map-frame {
+        box-shadow: none;
+      }
+
+      @media (max-width: 900px) {
+        .topbar {
+          position: sticky;
+          top: 8px;
+        }
+
+        .topbar-inner {
+          min-height: 52px;
+          padding: 6px 8px;
+        }
+
+        .brand {
+          flex: 0 0 auto;
+        }
+
+        .hero {
+          padding: 20px 0 52px;
+        }
+
+        .section {
+          padding: 68px 0;
+        }
+
+        .section-header {
+          grid-template-columns: 1fr;
+          gap: 12px;
+          margin-bottom: 28px;
+        }
+
+        .section-header h2 {
+          max-width: 15ch;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .hero-copy {
+          padding: 30px 24px;
+          border-radius: 26px;
+        }
+
+        .hero-copy::before {
+          inset: 10px;
+          border-radius: 18px;
+        }
+
+        .intro-line,
+        .section-kicker {
+          font-size: 0.63rem;
+        }
+
+        .hero-metrics {
+          gap: 8px;
+          margin-top: 32px;
+        }
+
+        .metric-card {
+          padding: 16px;
+        }
+
+        .section {
+          padding: 54px 0;
+        }
+
+        .section-services .section-card {
+          padding: 22px;
+        }
+      }
+
+      /* Full-width color fields keep the page rhythm simple; only content cards float. */
+      .topbar {
+        position: sticky;
+        top: 16px;
+      }
+
+      .topbar-inner {
+        width: min(780px, 100%);
+        min-height: 60px;
+        margin: 0 auto;
+      }
+
+      .hero {
+        /* Pull the color field behind the floating navigation without moving its content up. */
+        margin-top: -60px;
+        padding: 164px 0 86px;
+        background:
+          radial-gradient(circle at 90% 12%, rgba(255, 255, 255, 0.44), transparent 24%),
+          linear-gradient(135deg, #ffcbdd 0%, #ff9ec0 56%, #ff8a62 145%);
+      }
+
+      .hero-copy {
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        backdrop-filter: none;
+      }
+
+      .hero-copy::before {
+        display: none;
+      }
+
+      .section {
+        padding: 96px 0;
+        scroll-margin-top: -12px;
+      }
+
+      .section-about {
+        background: #fffafc;
+      }
+
+      .section-about .section-card,
+      .section-contact .contact-card {
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        backdrop-filter: none;
+      }
+
+      .section-services {
+        background: var(--panel);
+        color: #fff8fb;
+      }
+
+      .section-services .section-header h2 {
+        color: #fff8fb;
+      }
+
+      .section-services .section-header p {
+        color: #ffb8d1;
+      }
+
+      .section-services .section-card h3 {
+        color: var(--text);
+      }
+
+      .section-contact {
+        background: #ffb5cf;
+      }
+
+      .nav-toggle {
+        display: none;
+      }
+
+      @media (max-width: 900px) {
+        .topbar {
+          position: sticky;
+          top: 8px;
+        }
+
+        .topbar-inner {
+          width: calc(100% - 28px);
+          min-height: 52px;
+        }
+
+        .hero {
+          margin-top: -52px;
+          padding: 130px 0 60px;
+        }
+
+        .section {
+          padding: 76px 0;
+          scroll-margin-top: -8px;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .topbar-inner {
+          width: min(360px, calc(100% - 24px));
+          min-height: 48px;
+          padding: 6px 9px;
+          gap: 6px;
+        }
+
+        .brand {
+          gap: 5px;
+        }
+
+        .brand-mark {
+          width: 26px;
+          height: 26px;
+          flex-basis: 26px;
+        }
+
+        .brand-copy strong {
+          font-size: 0.53rem;
+          letter-spacing: 0.06em;
+          white-space: nowrap;
+        }
+
+        .nav {
+          position: static;
+          display: flex;
+          width: auto;
+          min-width: 0;
+          margin-left: auto;
+          padding: 0;
+          border: 0;
+          border-radius: 0;
+          background: transparent;
+          box-shadow: none;
+        }
+
+        .nav a:not(.nav-cta) {
+          display: none;
+        }
+
+        .nav-cta {
+          width: auto;
+          min-height: 30px;
+          padding: 0 10px;
+          font-size: 0.49rem;
+          letter-spacing: 0.03em;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .hero {
+          padding: 116px 0 54px;
+        }
+
+        .section {
+          padding: 64px 0;
+        }
+      }
+
+      .hero-copy h1 {
+        max-width: 12ch;
+        margin: 0 auto;
+        text-align: center;
+        font-size: clamp(3.5rem, 8vw, 7.2rem);
+        line-height: 0.9;
+        text-wrap: balance;
+      }
+
+      .hero-copy p {
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .section-services .section-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .section-services .section-header h2 {
+        max-width: 16ch;
+      }
+
+      .section-services .section-header p {
+        max-width: 56ch;
+      }
+
+      @media (max-width: 560px) {
+        .hero-copy h1 {
+          max-width: 11ch;
+          font-size: clamp(3rem, 14vw, 4.5rem);
+        }
+      }
     </style>
   </head>
   <body>
@@ -947,9 +1483,9 @@
       <header class="topbar">
         <div class="container topbar-inner">
           <a class="brand" href="#inicio">
+            <img class="brand-mark" src="favicon.png" alt="Logo de Jezabel Fit" />
             <div class="brand-copy">
-              <strong>Jezabel</strong>
-              <span>Personal trainer</span>
+              <strong>Jezabel Fit</strong>
             </div>
           </a>
 
@@ -965,7 +1501,6 @@
         <section class="hero">
           <div class="container hero-grid">
             <div class="hero-copy reveal">
-              <span class="intro-line">Entrenamiento Personalizado</span>
               <h1>Te ayudo a lograr tu mejor versión</h1>
               <p>
                 Acompaño a mujeres y hombres que quieren mejorar su rendimiento
@@ -996,7 +1531,7 @@
           </div>
         </section>
 
-        <section class="section" id="sobre-mi">
+        <section class="section section-about" id="sobre-mi">
           <div class="container about-grid">
             <div class="section-card reveal">
               <div class="section-header">
@@ -1054,7 +1589,7 @@
           </div>
         </section>
 
-        <section class="section" id="servicios">
+        <section class="section section-services" id="servicios">
           <div class="container">
             <div class="section-header reveal">
               <h2>Servicios pensados para objetivos concretos</h2>
@@ -1110,7 +1645,7 @@
           </div>
         </section>
 
-        <section class="section" id="contacto">
+        <section class="section section-contact" id="contacto">
           <div class="container">
             <div class="contact-card reveal">
               <div class="section-header">
@@ -1180,6 +1715,7 @@
       );
 
       document.querySelectorAll(".reveal").forEach((node) => observer.observe(node));
+
     </script>
   </body>
 </html>
