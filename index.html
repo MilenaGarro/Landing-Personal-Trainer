@@ -1690,6 +1690,18 @@
         right: -20px;
       }
 
+      @media (max-width: 900px) {
+        /* Narrower reading column keeps mobile cards breathable instead of edge-to-edge. */
+        .hero .container,
+        .section .container {
+          width: min(var(--max), calc(100% - 48px));
+        }
+
+        .hero-metrics {
+          gap: 12px;
+        }
+      }
+
       @media (max-width: 560px) {
         .hero-copy h1 {
           max-width: 11ch;
