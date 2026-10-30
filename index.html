@@ -1499,6 +1499,9 @@
       }
 
       .reviews-heading > div:first-child {
+        display: grid;
+        width: 100%;
+        justify-items: center;
         margin: 0 auto;
       }
 
@@ -1513,12 +1516,13 @@
       }
 
       .reviews-heading h2 {
-        max-width: 14ch;
+        max-width: none;
         margin: 0;
         font-family: "Outfit", sans-serif;
         font-size: clamp(2.4rem, 5vw, 4.4rem);
         line-height: 0.94;
         letter-spacing: -0.04em;
+        white-space: nowrap;
       }
 
       .reviews-subtitle {
@@ -1527,6 +1531,7 @@
         color: var(--muted);
         font-size: 1rem;
         line-height: 1.55;
+        text-align: center;
       }
 
       .reviews-summary {
@@ -1706,7 +1711,8 @@
         }
 
         .reviews-heading h2 {
-          max-width: 11ch;
+          max-width: none;
+          font-size: clamp(1.65rem, 8vw, 2.4rem);
         }
 
         .reviews-subtitle {
