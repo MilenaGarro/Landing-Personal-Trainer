@@ -1484,10 +1484,243 @@
         margin: 18px 0 0;
       }
 
+      .section-reviews {
+        background: #fff4dc;
+      }
+
+      .reviews-heading {
+        position: relative;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        gap: 28px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .reviews-heading > div:first-child {
+        margin: 0 auto;
+      }
+
+      .reviews-eyebrow {
+        display: block;
+        margin-bottom: 10px;
+        color: var(--panel-soft);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .reviews-heading h2 {
+        max-width: 14ch;
+        margin: 0;
+        font-family: "Outfit", sans-serif;
+        font-size: clamp(2.4rem, 5vw, 4.4rem);
+        line-height: 0.94;
+        letter-spacing: -0.04em;
+      }
+
+      .reviews-subtitle {
+        max-width: 44ch;
+        margin: 16px 0 0;
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 1.55;
+      }
+
+      .reviews-summary {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        column-gap: 9px;
+        padding: 14px 18px;
+        border: 1px solid rgba(79, 31, 53, 0.12);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.58);
+      }
+
+      .reviews-summary strong {
+        font-family: "Outfit", sans-serif;
+        font-size: 2rem;
+        line-height: 1;
+      }
+
+      .review-stars {
+        color: #e89c18;
+        font-size: 0.98rem;
+        letter-spacing: 0.04em;
+      }
+
+      .reviews-summary > span:last-child {
+        grid-column: 1 / -1;
+        margin-top: 5px;
+        color: var(--muted);
+        font-size: 0.78rem;
+      }
+
+      .reviews-source {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin-bottom: 26px;
+        color: var(--muted);
+        font-size: 0.87rem;
+      }
+
+      .google-logo {
+        display: inline-block;
+        font-family: Arial, sans-serif;
+        font-size: 1.35rem;
+        font-weight: 700;
+        line-height: 1;
+        background: linear-gradient(90deg, #4285f4 0 25%, #ea4335 25% 50%, #fbbc05 50% 75%, #34a853 75%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .reviews-source a {
+        color: var(--panel);
+        font-weight: 700;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .reviews-carousel {
+        position: relative;
+      }
+
+      .reviews-track {
+        display: flex;
+        gap: 16px;
+        overflow-x: auto;
+        padding: 4px 2px 14px;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+      }
+
+      .reviews-track::-webkit-scrollbar {
+        display: none;
+      }
+
+      .review-card {
+        display: flex;
+        flex: 0 0 calc((100% - 32px) / 3);
+        min-height: 248px;
+        flex-direction: column;
+        scroll-snap-align: start;
+        padding: 25px;
+        border: 1px solid rgba(79, 31, 53, 0.12);
+        border-radius: 22px;
+        background: #fffdf9;
+        box-shadow: 0 12px 26px rgba(79, 31, 53, 0.07);
+      }
+
+      .review-card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .review-author {
+        color: var(--text);
+        font-weight: 700;
+      }
+
+      .review-google-mark {
+        flex: 0 0 auto;
+        font-size: 1.2rem;
+      }
+
+      .review-google-link {
+        display: inline-flex;
+        border-radius: 50%;
+      }
+
+      .review-google-link:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+      }
+
+      .review-card .review-stars {
+        margin-top: 8px;
+        font-size: 0.84rem;
+      }
+
+      .review-comment {
+        margin: 18px 0 0;
+        color: var(--muted);
+        line-height: 1.65;
+        white-space: pre-line;
+      }
+
+      .review-arrow {
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+        display: grid;
+        width: 40px;
+        height: 40px;
+        border: 0;
+        border-radius: 50%;
+        background: var(--panel);
+        color: #fff8fb;
+        cursor: pointer;
+        place-items: center;
+        transform: translateY(-50%);
+      }
+
+      .review-arrow-prev {
+        left: -20px;
+      }
+
+      .review-arrow-next {
+        right: -20px;
+      }
+
       @media (max-width: 560px) {
         .hero-copy h1 {
           max-width: 11ch;
           font-size: clamp(3rem, 14vw, 4.5rem);
+        }
+
+        .reviews-heading {
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .reviews-heading > div:first-child {
+          margin: 0 auto;
+        }
+
+        .reviews-summary {
+          position: static;
+        }
+
+        .reviews-heading h2 {
+          max-width: 11ch;
+        }
+
+        .reviews-subtitle {
+          font-size: 0.92rem;
+        }
+
+        .review-card {
+          flex-basis: 84%;
+          min-height: 230px;
+          padding: 21px;
+        }
+
+        .review-arrow {
+          display: none;
         }
       }
     </style>
@@ -1659,6 +1892,28 @@
           </div>
         </section>
 
+        <section class="section section-reviews" id="resenas">
+          <div class="container">
+            <div class="reviews-heading reveal">
+              <div>
+                <h2>Experiencias reales</h2>
+                <p class="reviews-subtitle">Reseñas de Google de alumnos que siguen eligiéndome para entrenar.</p>
+              </div>
+              <div class="reviews-summary" aria-label="Calificación de Google Maps: 5,0 estrellas, 11 reseñas">
+                <strong id="reviews-rating">5,0</strong>
+                <span class="review-stars" aria-hidden="true">★★★★★</span>
+                <span id="reviews-total">11 reseñas</span>
+              </div>
+            </div>
+
+            <div class="reviews-carousel reveal">
+              <button class="review-arrow review-arrow-prev" type="button" aria-label="Ver reseñas anteriores">←</button>
+              <div class="reviews-track" id="reviews-track" aria-live="polite"></div>
+              <button class="review-arrow review-arrow-next" type="button" aria-label="Ver más reseñas">→</button>
+            </div>
+          </div>
+        </section>
+
         <section class="section section-contact" id="contacto">
           <div class="container">
             <div class="contact-card reveal">
@@ -1738,6 +1993,71 @@
 
       document.querySelectorAll(".reveal").forEach((node) => observer.observe(node));
 
+      const reviewsTrack = document.querySelector("#reviews-track");
+      const previousReview = document.querySelector(".review-arrow-prev");
+      const nextReview = document.querySelector(".review-arrow-next");
+      const reviewsRating = document.querySelector("#reviews-rating");
+      const reviewsTotal = document.querySelector("#reviews-total");
+
+      function makeReviewCard(review) {
+        const card = document.createElement("article");
+        card.className = "review-card";
+
+        const header = document.createElement("div");
+        header.className = "review-card-header";
+        const author = document.createElement("strong");
+        author.className = "review-author";
+        author.textContent = review.autor;
+        header.appendChild(author);
+
+        const googleMark = review.urlResena ? document.createElement("a") : document.createElement("span");
+        googleMark.className = "google-logo review-google-mark";
+        googleMark.setAttribute("aria-label", "Reseña de Google Maps");
+        googleMark.title = review.urlResena ? "Ver reseña en Google Maps" : "Reseña de Google Maps";
+        googleMark.textContent = "G";
+        if (review.urlResena) {
+          googleMark.classList.add("review-google-link");
+          googleMark.href = review.urlResena;
+          googleMark.target = "_blank";
+          googleMark.rel = "noreferrer";
+        }
+        header.appendChild(googleMark);
+
+        const stars = document.createElement("span");
+        stars.className = "review-stars";
+        stars.setAttribute("aria-label", `${review.estrellas} de 5 estrellas`);
+        stars.textContent = "★★★★★";
+
+        const comment = document.createElement("p");
+        comment.className = "review-comment";
+        comment.textContent = review.comentario;
+
+        card.append(header, stars, comment);
+
+        return card;
+      }
+
+      fetch("./data/jezabel_resenas.json")
+        .then((response) => {
+          if (!response.ok) throw new Error("No se pudieron cargar las reseñas");
+          return response.json();
+        })
+        .then((data) => {
+          reviewsRating.textContent = data.calificacionGeneral.toFixed(1).replace(".", ",");
+          reviewsTotal.textContent = `${data.totalResenas} reseñas`;
+          data.resenas.forEach((review) => reviewsTrack.appendChild(makeReviewCard(review)));
+        })
+        .catch(() => {
+          reviewsTrack.textContent = "Las reseñas estarán disponibles nuevamente pronto.";
+        });
+
+      function moveReviews(direction) {
+        const distance = reviewsTrack.clientWidth * 0.82;
+        reviewsTrack.scrollBy({ left: direction * distance, behavior: "smooth" });
+      }
+
+      previousReview.addEventListener("click", () => moveReviews(-1));
+      nextReview.addEventListener("click", () => moveReviews(1));
     </script>
   </body>
 </html>

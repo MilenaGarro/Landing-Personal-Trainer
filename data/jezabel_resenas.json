@@ -1,0 +1,85 @@
+{
+  "negocio": "jezabel fit, personal trainer",
+  "fuente": "google maps",
+  "calificacionGeneral": 5,
+  "totalResenas": 11,
+  "urlNegocio": "https://www.google.com/maps/place/Jezabel+Fit+-+Personal+Trainer/@-34.615964,-58.361819,15z/data=!4m5!3m4!1s0x95a335003dbc2b6d:0xf544f73c8a9131df!8m2!3d-34.615964!4d-58.361819",
+  "nota": "Transcripción de las reseñas visibles el 30 de octubre de 2026. Cinco comentarios aparecen truncados en la vista accesible. Los enlaces individuales no se pudieron recuperar. No presentar los textos truncados como citas completas ni usar el enlace general como si fuese individual.",
+  "resenas": [
+    {
+      "autor": "Jessica Mastromarini",
+      "estrellas": 5,
+      "comentario": "Excelente profesional y persona. Doy fe que es crack como entrenadora 💪…",
+      "textoCompleto": false,
+      "urlResena": "https://maps.app.goo.gl/qkoecED1JhSgnkqv6"
+    },
+    {
+      "autor": "Cintia Diaz",
+      "estrellas": 5,
+      "comentario": "Una genia Day !!! Sacando mi mejor versión 💪🏻…",
+      "textoCompleto": false,
+      "urlResena": "https://maps.app.goo.gl/t5B3xDhPVcVGmjXh9"
+    },
+    {
+      "autor": "Nelida Gilardi",
+      "estrellas": 5,
+      "comentario": "Soy una persona mayor cendentaria y jezabel me acomodo los ejercicios acorde a mi condición súper recomendable",
+      "textoCompleto": true,
+      "urlResena": "https://maps.app.goo.gl/eiq5UC4F7P13RM8B8"
+    },
+    {
+      "autor": "Glitter Look",
+      "estrellas": 5,
+      "comentario": "La mejor! Te acompaña desde el primer momento y adapta todo a tus objetivos. 💪🏽💪🏽…",
+      "textoCompleto": false,
+      "urlResena": "https://maps.app.goo.gl/zz6SkgtrzPohCjgb9"
+    },
+    {
+      "autor": "Sol Flores",
+      "estrellas": 5,
+      "comentario": "La mejor profe, con muchos conocimientos y técnicas! Me ayudó un montón a lograr los resultados que quería en mi cuerpo. Súper recomendable!!",
+      "textoCompleto": true,
+      "urlResena": "https://maps.app.goo.gl/q3TsGWFpg7GVG7xM7"
+    },
+    {
+      "autor": "Lucas Gaston Laprovitera",
+      "estrellas": 5,
+      "comentario": "Me encanta entrenar con ella! Siempre con buena onda, motivación y constancia.\nMe cambió el cuerpo pero principalmente mi cabeza dio un giro de 180° ya que mi plan de adapta a mis necesidades, tiempos y hábitos.\nHoy en día después de más de dos años de entrenar dos veces por semana, siento que no lo dejo por nada!",
+      "textoCompleto": true,
+      "urlResena": "https://maps.app.goo.gl/Wa1AVuE8iPMHif446"
+    },
+    {
+      "autor": "Leticia Gomez Medina",
+      "estrellas": 5,
+      "comentario": "Me gustan muchos las planificaciones y los entrenamientos!!!",
+      "textoCompleto": true,
+      "urlResena": "https://maps.app.goo.gl/fKusZsnXhcdA4S838"
+    },
+    {
+      "autor": "RUIZ Valentina",
+      "estrellas": 5,
+      "comentario": "excelente entrenadora!! 💗 súper atenta y comprometida con cada entrenamiento. siempre está pendiente de que hagamos bien los ejercicios y de que vayamos progresando. además, hace que entrenar sea mucho más lindo y llevadero. se nota muchísimo la dedicación y el amor que le pone a lo que hace 🫶🏼…",
+      "textoCompleto": false,
+      "urlResena": "https://maps.app.goo.gl/M3smQMma3nu3SLq47"
+    },
+    {
+      "autor": "Malena Espejon",
+      "estrellas": 5,
+      "comentario": "Excelente profe!!! Muy atenta y buena onda. Me ayudó mucho a progresar y mejorar mis rutinas 💪🏻💪🏻…",
+      "textoCompleto": false,
+      "urlResena": "https://maps.app.goo.gl/Ly52jFcEN6JrZfHc7"
+    },
+    {
+      "autor": "Roberto Elizondo",
+      "estrellas": 5,
+      "comentario": "Increible su forma de trabajar es una excelente profesional,la recomiendo ,Soy una persona excedida de peso y jezabel me adapta la rutina gracias",
+      "textoCompleto": true
+    },
+    {
+      "autor": "Melisa Elizondo",
+      "estrellas": 5,
+      "comentario": "Me encanta! En poco tiempo vi cambios en mi cuerpo, me encantaaa el entrenamiento que propone! Hacia mucho tiempo que no hacía nada y ella tuvo mucha paciencia de a poco pude lograr todos mis objetivos y voy por màs súper recomendable!",
+      "textoCompleto": true
+    }
+  ]
+}
